@@ -60,15 +60,15 @@ def main():
         #   draws starting game position
         draw_empty_board(screen)
 
-        for i in range(0, 5):
-            for j in range(0, 5):
-                if grid[i][j] == 1:
-                    pygame.draw.circle(screen, (255, 0, 0), (i * 25, j * 25), 6)
+        for i in grid:
+            for j in i:
+                if i[j] == 1:
+                    pygame.draw.circle(screen, (255, 0, 0), ( 25 / 2, 25 / 2), 8)
                     pygame.display.update()
                 else:
                     continue
-
-        sleep(100)
+        
+        sleep(10)
 
 if __name__ == "__main__":
     main()
